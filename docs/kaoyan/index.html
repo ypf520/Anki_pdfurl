@@ -1,0 +1,23 @@
+<div style="display:none">{{glossary}}</div>
+
+<div class="section" {{^audio}}onclick="playAudio('expression')"{{/audio}}>
+<div id="front" class="items">
+<a onclick="event.stopPropagation();" href="{{url}}">
+<span id="expression">{{expression}}</span></a>
+{{#reading}}
+<span id="reading">{{reading}}</span>
+{{/reading}}
+{{#note}}
+<span id="note">{{note}}</span>
+{{/note}}
+<span id="audio">{{audio}}</span>
+</div>
+</div>
+
+{{#sentence}}
+<div class="section">
+<div id="front-extra1" class="items">{{sentence}}</div>
+</div>
+{{/sentence}}
+
+<audio id="player" src=""></audio>
